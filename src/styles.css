@@ -1,10 +1,10 @@
-@import "tailwindcss";
-@source "./";
+@import "tailwindcss" source(none);
+@source "../src";
 @import "tw-animate-css";
 
-@define-variant dark (&:is(.dark *));
+@custom-variant dark (&:is(.dark *));
 
-@theme {
+@theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -96,10 +96,8 @@
   h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
 }
 
-@layer utilities {
-  @define-utility container-narrow {
-    max-width: 72rem;
-    margin-inline: auto;
-    padding-inline: 1.25rem;
-  }
+@utility container-narrow {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
 }
