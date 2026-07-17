@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
+import logo from "@/assets/logo.png";
 import heroBuses from "@/assets/bus.png";
 import {
   LEADERSHIP,
@@ -69,7 +70,7 @@ function Home() {
                 Contact & Complaints
               </Link>
             </div>
-          </div>
+          </div>222
         </div>
       </section>
 
