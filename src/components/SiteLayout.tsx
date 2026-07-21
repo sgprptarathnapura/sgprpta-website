@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
-import { NAV, SITE, COMPLAINTS, logo } from "@/lib/site-data";
+import logo from "@/assets/logo.png";
+import { NAV, SITE, COMPLAINTS } from "@/lib/site-data";
 
 type Lang = "en" | "si" | "ta";
 
@@ -78,6 +79,7 @@ function LanguageSwitcher() {
   );
 }
 
+
 function Header() {
   const [open, setOpen] = useState(false);
   const path = useRouterState({ select: (s) => s.location.pathname });
@@ -94,10 +96,7 @@ function Header() {
       </div>
       <div className="container-narrow flex items-center justify-between gap-4 py-3">
         <Link to="/" className="flex items-center gap-3">
-          {/* Text badge placeholder — swap for <img src={logo} .../> once you add a real logo file to src/assets */}
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground font-display font-bold ring-2 ring-primary/20">
-            SG
-          </div>
+          <img src={logo} alt="SGPRPTA emblem" className="h-12 w-12 rounded-full ring-2 ring-primary/20" />
           <div className="leading-tight">
             <div className="font-display text-[15px] font-bold text-primary sm:text-base">
               {SITE.shortName}
@@ -162,10 +161,7 @@ function Footer() {
       <div className="container-narrow grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            {/* Text badge placeholder — swap for <img src={logo} .../> once you add a real logo file to src/assets */}
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary font-display font-bold text-sm">
-              SG
-            </div>
+            <img src={logo} alt="" className="h-10 w-10 rounded-full bg-white p-1" />
             <span className="font-display font-bold">SGPRPTA</span>
           </div>
           <p className="mt-3 text-sm opacity-80">
@@ -224,7 +220,8 @@ function Footer() {
       </div>
     </footer>
   );
- }
+}
+
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
@@ -234,4 +231,4 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <Footer />
     </div>
   );
-} 
+}

@@ -212,6 +212,14 @@ export const SUB_BRANCHES = [
   { town: "Nelumdeniya", stand: "Central Bus Stand, Nelumdeniya" },
 ];
 
+export const STAFF = [
+  { name: "Damith Priyantha Batawala", role: "General Manager", photo: "https://via.placeholder.com/150" },
+  { name: "Mr. M.A. Pushpakumara Danasekara", role: "Board Member", photo: "https://via.placeholder.com/150" },
+  { name: "Mr. K. Palitha Kalugama", role: "Board Member", photo: "https://via.placeholder.com/150" },
+  { name: "Mr. H.A.D. Hettiarachchi", role: "Board Member", photo: "https://via.placeholder.com/150" },
+  { name: "Mr. Thusitha Jayasena", role: "Information Officer / Main Coordinator", photo: "https://via.placeholder.com/150" },
+];
+
 export const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
