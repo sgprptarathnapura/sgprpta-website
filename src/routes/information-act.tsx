@@ -92,71 +92,7 @@ function InfoAct() {
         </aside>
       </section>
 
-      {/* Bus Time Table */}
-      <section className="border-t border-border bg-secondary/40 py-16">
-        <div className="container-narrow">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Public Information</p>
-              <h2 className="mt-2 font-display text-3xl font-bold">Bus Time Table — Sample Schedule</h2>
-              <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-                Indicative departures on major routes operated under SGPRPTA. Timings are a sample
-                and may be revised — confirm with the relevant sub-branch before travel.
-              </p>
-            </div>
-            <span className="rounded-md bg-primary-soft px-3 py-1.5 text-xs font-semibold text-primary">
-              Effective sample · 2025
-            </span>
-          </div>
-
-          <div className="mt-8 overflow-hidden rounded-xl border border-border bg-card shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[720px] text-left text-sm">
-                <thead className="bg-primary text-primary-foreground">
-                  <tr>
-                    <th className="px-4 py-3 font-semibold">Route</th>
-                    <th className="px-4 py-3 font-semibold">From</th>
-                    <th className="px-4 py-3 font-semibold">To</th>
-                    <th className="px-4 py-3 font-semibold">Departure</th>
-                    <th className="px-4 py-3 font-semibold">Arrival</th>
-                    <th className="px-4 py-3 font-semibold">Type</th>
-                    <th className="px-4 py-3 font-semibold">Days</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-border">
-                  {BUS_TIMETABLE.map((t, i) => (
-                    <tr key={i} className="hover:bg-primary-soft/50">
-                      <td className="px-4 py-3 font-mono font-semibold text-primary">{t.route}</td>
-                      <td className="px-4 py-3">{t.from}</td>
-                      <td className="px-4 py-3">{t.to}</td>
-                      <td className="px-4 py-3 font-mono">{t.departure}</td>
-                      <td className="px-4 py-3 font-mono">{t.arrival}</td>
-                      <td className="px-4 py-3">
-                        <span
-                          className={
-                            "inline-block rounded-full px-2.5 py-0.5 text-xs font-medium " +
-                            (t.type === "Semi-Luxury"
-                              ? "bg-gold/20 text-primary-dark"
-                              : "bg-primary/10 text-primary")
-                          }
-                        >
-                          {t.type}
-                        </span>
-                      </td>
-                      <td className="px-4 py-3 text-muted-foreground">{t.days}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <p className="mt-4 text-xs text-muted-foreground">
-            * This is a sample schedule for demonstration. The complete, authoritative timetable will
-            be published here once received from the Operations Division.
-          </p>
-        </div>
-      </section>
+     
     </SiteLayout>
   );
 }

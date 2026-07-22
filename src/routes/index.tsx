@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import logo from "@/assets/logo.png";
 import heroBuses from "@/assets/bus.png";
 import {
   LEADERSHIP,
@@ -58,10 +57,10 @@ function Home() {
                 Explore Services
               </Link>
               <Link
-                to="/information-act"
+                to="/staff"
                 className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-primary shadow-elegant transition hover:bg-white/90"
               >
-                Bus Time Table
+                Meet Our Staff
               </Link>
               <Link
                 to="/contact"
@@ -70,7 +69,8 @@ function Home() {
                 Contact & Complaints
               </Link>
             </div>
-          </div>222
+          </div>
+         
         </div>
       </section>
 

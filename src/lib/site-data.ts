@@ -25,7 +25,7 @@ export const NOTICES = [
 export const LEADERSHIP = [
   { role: "The Governor", name: "Mrs. Champa Janaki Rajarathne" },
   { role: "The Chairman", name: "Mr. Leelananda Kaluthota" },
-  { role: "General Manager", name: "Damith Priyantha Batawala" },
+  { role: "General Manager(Acting)", name: "Mr. Thusitha Jayasena" },
 ];
 
 export const MAIN_FUNCTIONS = [
@@ -80,8 +80,8 @@ export const INFO_OFFICER = {
 };
 
 export const RTI_OFFICER = {
-  name: "Damith Priyantha Batawala",
-  role: "Information Officer — General Manager",
+  name: "Mr. Thusitha Jayasena",
+  role: "Information Officer — General Manager(Acting)",
   mobile: "+94 71 439 6696",
   phones: ["+94 45 2230557", "+94 35 2232295"],
   fax: "+94 45 2222085",
@@ -212,18 +212,37 @@ export const SUB_BRANCHES = [
   { town: "Nelumdeniya", stand: "Central Bus Stand, Nelumdeniya" },
 ];
 
-export const STAFF = [
-  { name: "Damith Priyantha Batawala", role: "General Manager", photo: "https://via.placeholder.com/150" },
-  { name: "Mr. M.A. Pushpakumara Danasekara", role: "Board Member", photo: "https://via.placeholder.com/150" },
-  { name: "Mr. K. Palitha Kalugama", role: "Board Member", photo: "https://via.placeholder.com/150" },
-  { name: "Mr. H.A.D. Hettiarachchi", role: "Board Member", photo: "https://via.placeholder.com/150" },
-  { name: "Mr. Thusitha Jayasena", role: "Information Officer / Main Coordinator", photo: "https://via.placeholder.com/150" },
-];
-
 export const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/information-act", label: "Information Act" },
+  { to: "/staff", label: "Staff" },
   { to: "/contact", label: "Contact" },
 ] as const;
+
+const avatar = (name: string) =>
+  `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=6b1220&color=f6c352&size=256&bold=true&format=png`;
+
+// Updated from official staff list (name_list.docx).
+export const STAFF = [
+  { name: "H. N. T. K. Jayasena", position: "General Manager (Acting)", photo: avatar("H N T K Jayasena") },
+  { name: "D. L. T. M. Disanayaka", position: "Operational Manager", photo: avatar("D L T M Disanayaka") },
+  { name: "K. M. Udeshika Madubhashini", position: "Chief Management Service Officer", photo: avatar("Udeshika Madubhashini") },
+  { name: "S. A. Swarnalatha", position: "Management Service Officer", photo: avatar("S A Swarnalatha") },
+  { name: "J. M. Pramila Niroshani Jayasekara", position: "Management Service Officer", photo: avatar("P N Jayasekara") },
+  { name: "Nilusha Dilrukshi Godawitharana", position: "Management Service Officer", photo: avatar("N D Godawitharana") },
+  { name: "M. A. Chamari Nowadani Mallikaarachchi", position: "Management Service Officer", photo: avatar("C N Mallikaarachchi") },
+  { name: "N. K. Nandani Sujatha", position: "Management Service Officer", photo: avatar("N K N Sujatha") },
+  { name: "K. K. Anusha Damayanthi", position: "Management Service Officer", photo: avatar("A K Damayanthi") },
+  { name: "R. A. Nadika Lalani", position: "Management Service Officer", photo: avatar("R A N Lalani") },
+  { name: "H. M. Buddhika Gunathilaka", position: "Management Service Officer", photo: avatar("B M Gunathilaka") },
+  { name: "M. L. Thamali Dhanushika", position: "Management Service Officer", photo: avatar("T L Dhanushika") },
+  { name: "D. H. A. Harsha Medhani Wickramasinghe", position: "Management Service Officer", photo: avatar("H M Wickramasinghe") },
+  { name: "H. B. N. D. Somarathna", position: "Management Service Officer", photo: avatar("H B N D Somarathna") },
+  { name: "R. R. L. Jayawardhana", position: "Management Service Officer", photo: avatar("R R L Jayawardhana") },
+  { name: "H. M. Sumith Karunarathna", position: "Management Service Officer", photo: avatar("S M Karunarathna") },
+  { name: "W. M. Munasinghe", position: "Office Assistant", photo: avatar("W M Munasinghe") },
+  { name: "M. W. K. Tilakarathna", position: "Office Assistant", photo: avatar("M W K Tilakarathna") },
+  { name: "T. M. Harsha Lakruwan", position: "Driver", photo: avatar("T M Harsha Lakruwan") },
+];

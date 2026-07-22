@@ -49,7 +49,7 @@ function Staff() {
                 {s.name}
               </p>
               <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                {s.role}
+                {s.position}
               </p>
             </div>
           ))}
@@ -63,4 +63,3 @@ function Staff() {
     </SiteLayout>
   );
 }
-
