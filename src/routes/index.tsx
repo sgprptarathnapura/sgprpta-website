@@ -1,15 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/SiteLayout";
+import logo from "@/assets/logo.png";
 import heroBuses from "@/assets/bus.png";
-import {
-  LEADERSHIP,
-  MAIN_FUNCTIONS,
-  NOTICES,
-  COMPLAINTS,
-  STATS,
-  SITE,
-} from "@/lib/site-data";
-
+import { LEADERSHIP, COMPLAINTS, STATS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,14 +12,18 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Reliable and quality passenger transport in Sabaragamuwa. Notices, leadership, complaints hotlines and RTI contacts.",
+          "Reliable and quality passenger transport in Sabaragamuwa. Leadership, complaints hotlines and RTI contacts.",
       },
     ],
   }),
   component: Home,
 });
 
+type FunctionItem = { title: string; body: string };
+
 function Home() {
+  const { t } = useTranslation();
+  const functions = (t("functions", { returnObjects: true }) as FunctionItem[]) ?? [];
   return (
     <SiteLayout>
       {/* Hero */}
@@ -40,33 +38,33 @@ function Home() {
           aria-hidden
           className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/85 to-primary-dark/10"
         />
-        <div className="container-narrow relative grid gap-10 py-20 md:min-h-[520px] md:grid-cols-[1.1fr_auto] md:items-center md:py-28">
+         <div className="container-narrow relative grid gap-10 py-16 text-center md:min-h-[520px] md:grid-cols-[1.1fr_auto] md:items-center md:py-28 md:text-left">
           <div>
-            <span className="inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold ring-1 ring-white/20 notranslate" translate="no">
-              Government of Sri Lanka · Sabaragamuwa Province
+            <span className="inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold ring-1 ring-white/20">
+              {t("home.eyebrow")}
             </span>
-            <h1 className="mt-4 font-display text-4xl font-bold leading-tight drop-shadow-lg sm:text-5xl md:text-6xl">
-              Sabaragamuwa Provincial Road Passenger Transport Authority
+            <h1 className="mt-4 font-display text-3xl font-bold leading-tight drop-shadow-lg sm:text-5xl md:text-6xl">
+              {t("home.title")}
             </h1>
-            <p className="mt-5 max-w-xl text-lg text-white/90 drop-shadow">{SITE.tagline}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <p className="mx-auto mt-5 max-w-xl text-base text-white/90 drop-shadow sm:text-lg md:mx-0">{t("home.tagline")}</p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
               <Link
                 to="/services"
                 className="rounded-md bg-gold px-6 py-3 text-sm font-semibold text-primary-dark shadow-elegant transition hover:brightness-110"
               >
-                Explore Services
+                {t("home.cta.services")}
               </Link>
               <Link
                 to="/staff"
                 className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-primary shadow-elegant transition hover:bg-white/90"
               >
-                Meet Our Staff
+                {t("home.cta.staff")}
               </Link>
               <Link
                 to="/contact"
                 className="rounded-md border border-white/50 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
-                Contact & Complaints
+                {t("home.cta.contact")}
               </Link>
             </div>
           </div>
@@ -74,45 +72,23 @@ function Home() {
         </div>
       </section>
 
-
-      {/* Notices bar */}
-      <section className="border-b border-border bg-primary-soft/60">
-        <div className="container-narrow grid gap-3 py-4 md:grid-cols-2">
-          {NOTICES.map((n) => (
-            <a
-              key={n.href}
-              href={n.href}
-              target="_blank"
-              rel="noreferrer"
-              className="group flex items-center gap-3 rounded-md border border-primary/15 bg-background px-4 py-3 text-sm transition hover:border-primary hover:shadow-sm"
-            >
-              <span className="rounded bg-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
-                {n.tag}
-              </span>
-              <span className="flex-1 font-medium text-foreground group-hover:text-primary">
-                {n.title}
-              </span>
-              <span className="text-primary">↗</span>
-            </a>
-          ))}
-        </div>
-      </section>
-
       {/* Leadership */}
       <section className="container-narrow py-16">
-        <SectionHeading eyebrow="Our Leadership" title="The people who guide the Authority" />
+        <SectionHeading eyebrow={t("home.leadership.eyebrow")} title={t("home.leadership.title")} />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {LEADERSHIP.map((p) => (
             <div
-              key={p.role}
-              className="rounded-xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-elegant"
+              key={p.roleKey}
+              className="rounded-xl border border-border bg-card p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-elegant sm:text-left"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground sm:mx-0">
                 <span className="font-display text-2xl">
                   {p.name.split(" ").slice(-2, -1)[0]?.[0] ?? p.name[0]}
                 </span>
               </div>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-primary">{p.role}</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-primary">
+                {t(`leadership.${p.roleKey}`)}
+              </p>
               <p className="mt-1 font-display text-lg font-semibold">{p.name}</p>
             </div>
           ))}
@@ -122,10 +98,10 @@ function Home() {
       {/* Main Functions */}
       <section className="bg-secondary/50 py-16">
         <div className="container-narrow">
-          <SectionHeading eyebrow="Main Functions" title="What the Authority does" />
+          <SectionHeading eyebrow={t("home.functions.eyebrow")} title={t("home.functions.title")} />
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {MAIN_FUNCTIONS.map((f, i) => (
-              <div key={f.title} className="relative rounded-xl border border-border bg-card p-6">
+            {functions.map((f, i) => (
+              <div key={i} className="relative rounded-xl border border-border bg-card p-6">
                 <div className="mb-3 flex items-center gap-3">
                   <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary font-display text-primary-foreground">
                     {i + 1}
@@ -139,17 +115,26 @@ function Home() {
         </div>
       </section>
 
-      {/* Stats */}
+      {/* Stats — split per district */}
       <section className="container-narrow py-16">
-        <SectionHeading eyebrow="By the Numbers" title="Serving Sabaragamuwa" />
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {STATS.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-xl border border-border bg-card p-6 text-center"
-            >
-              <p className="font-display text-4xl font-bold text-primary">{s.value}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{s.label}</p>
+        <SectionHeading eyebrow={t("home.stats.eyebrow")} title={t("home.stats.title")} />
+        <div className="mt-10 space-y-10">
+          {(["ratnapura", "kegalle"] as const).map((district) => (
+            <div key={district}>
+              <h3 className="font-display text-xl font-semibold text-primary">
+                {t(`home.stats.${district}`)}
+              </h3>
+              <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
+                {STATS.map((s) => (
+                  <div
+                    key={`${district}-${s.key}`}
+                    className="rounded-xl border border-border bg-card p-6 text-center"
+                  >
+                    <p className="font-display text-4xl font-bold text-primary">{s.value}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">{t(`stats.${s.key}`)}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -159,20 +144,20 @@ function Home() {
       <section className="bg-primary-dark py-16 text-primary-foreground">
         <div className="container-narrow">
           <SectionHeading
-            eyebrow="Report an Issue"
-            title="Complaint Hotlines"
+            eyebrow={t("home.complaints.eyebrow")}
+            title={t("home.complaints.title")}
             invert
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {(
               [
-                ["Ratnapura District", COMPLAINTS.ratnapura],
-                ["Kegalle District", COMPLAINTS.kegalle],
+                [t("home.district.ratnapura"), COMPLAINTS.ratnapura],
+                [t("home.district.kegalle"), COMPLAINTS.kegalle],
               ] as const
             ).map(([district, nums]) => (
               <div
                 key={district}
-                className="rounded-xl border border-white/15 bg-white/5 p-6 backdrop-blur"
+                className="rounded-xl border border-white/15 bg-white/5 p-6 text-center backdrop-blur sm:text-left"
               >
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">{district}</p>
                 <div className="mt-3 space-y-1.5">

@@ -1,8 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "./about";
-import { OFFICES, SUB_BRANCHES, COMPLAINTS } from "@/lib/site-data";
+import {
+  OFFICES,
+  SUB_BRANCHES_RATNAPURA,
+  SUB_BRANCHES_KEGALLE,
+  COMPLAINTS,
+} from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -11,7 +17,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact the Sabaragamuwa Provincial Road Passenger Transport Authority — head office (Kegalle), district office (Ratnapura), sub-branches and complaint hotlines.",
+          "Contact the Sabaragamuwa Provincial Road Passenger Transport Authority — head office (Ratnapura), district office (Kegalle), sub-branches and complaint hotlines.",
       },
       { property: "og:title", content: "Contact — SGPRPTA" },
       { property: "og:description", content: "Head office, district office, sub-branches and complaint hotlines." },
@@ -20,21 +26,43 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
+type Branch = { town: string; stand: string; phone?: string };
+
+function BranchGrid({ items }: { items: Branch[] }) {
+  return (
+    <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((b) => (
+        <div key={b.town} className="rounded-lg border border-border bg-card p-4 transition hover:border-primary/40">
+          <p className="font-display text-base font-semibold text-primary">{b.town}</p>
+          <p className="mt-0.5 text-xs text-muted-foreground">{b.stand}</p>
+          {b.phone && (
+            <a href={`tel:${b.phone.replace(/\s/g, "")}`} className="mt-1 block text-sm text-foreground hover:text-primary">
+              {b.phone}
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function Contact() {
+  const { t } = useTranslation();
+  const total = SUB_BRANCHES_RATNAPURA.length + SUB_BRANCHES_KEGALLE.length;
   return (
     <SiteLayout>
-      <PageHero title="Contact Us" subtitle="Reach the right office quickly — head office, district office or your nearest sub-branch." />
+      <PageHero title={t("contact.title")} subtitle={t("contact.subtitle")} />
 
       {/* Offices */}
       <section className="container-narrow grid gap-6 py-16 md:grid-cols-2">
         {OFFICES.map((o) => (
           <div key={o.key} className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
             <div className="bg-primary px-6 py-4 text-primary-foreground">
-              <h2 className="font-display text-xl font-bold">{o.title}</h2>
+              <h2 className="font-display text-xl font-bold">{t(o.titleKey)}</h2>
             </div>
             <div className="grid gap-4 p-6 text-sm">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-primary">Address</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary">{t("contact.address")}</p>
                 <address className="mt-1 not-italic text-foreground/85">
                   {o.address.map((l) => (
                     <div key={l}>{l}</div>
@@ -43,7 +71,7 @@ function Contact() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-primary">Phone</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-primary">{t("contact.phone")}</p>
                   <div className="mt-1 space-y-0.5">
                     {o.phones.map((p) => (
                       <a key={p} href={`tel:${p.replace(/\s/g, "")}`} className="block hover:text-primary">
@@ -53,12 +81,12 @@ function Contact() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-primary">Fax</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-primary">{t("contact.fax")}</p>
                   <p className="mt-1">{o.fax}</p>
                 </div>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-primary">Email</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary">{t("contact.email")}</p>
                 <a href={`mailto:${o.email}`} className="mt-1 block text-primary hover:underline">
                   {o.email}
                 </a>
@@ -67,25 +95,25 @@ function Contact() {
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.mapQuery)}`}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-2 inline-flex w-fit items-center gap-2 rounded-md border border-primary/30 px-4 py-2 text-sm font-medium text-primary hover:bg-primary-soft"
+                className="mt-2 inline-flex w-fit items-center gap-2 rounded-md border border-primary/25 bg-primary-soft px-4 py-2 text-sm font-medium text-primary transition hover:border-primary"
               >
-                Open in Google Maps ↗
+                {t("contact.viewMap")} <span aria-hidden>↗</span>
               </a>
             </div>
           </div>
         ))}
       </section>
 
-      {/* Complaints */}
+      {/* Complaint Hotlines */}
       <section className="bg-primary-dark py-14 text-primary-foreground">
         <div className="container-narrow">
-          <h2 className="font-display text-2xl font-bold">Complaint Hotlines</h2>
-          <p className="mt-1 text-sm opacity-85">Report bus service issues directly to the district you are travelling in.</p>
+          <h2 className="font-display text-2xl font-bold">{t("contact.hotlines")}</h2>
+          <p className="mt-1 text-sm opacity-85">{t("contact.hotlinesNote")}</p>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {(
               [
-                ["Ratnapura District", COMPLAINTS.ratnapura],
-                ["Kegalle District", COMPLAINTS.kegalle],
+                [t("home.district.ratnapura"), COMPLAINTS.ratnapura],
+                [t("home.district.kegalle"), COMPLAINTS.kegalle],
               ] as const
             ).map(([district, nums]) => (
               <div key={district} className="rounded-xl border border-white/15 bg-white/5 p-5">
@@ -103,34 +131,33 @@ function Contact() {
         </div>
       </section>
 
-      {/* Sub-branches */}
+      {/* Sub-branches split by district */}
       <section className="container-narrow py-16">
-        <h2 className="font-display text-2xl font-bold text-primary">Sub-Branches Across the Province</h2>
+        <h2 className="font-display text-2xl font-bold text-primary">{t("contact.subBranches")}</h2>
         <p className="mt-1 text-sm text-muted-foreground">
-          Transport Authority sub-branches at central bus stands. ({SUB_BRANCHES.length} locations)
+          {t("contact.subBranchesNote", { count: total })}
         </p>
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {SUB_BRANCHES.map((b) => (
-            <div key={b.town} className="rounded-lg border border-border bg-card p-4 transition hover:border-primary/40">
-              <p className="font-display text-base font-semibold text-primary">{b.town}</p>
-              <p className="mt-0.5 text-xs text-muted-foreground">{b.stand}</p>
-              {b.phone && (
-                <a href={`tel:${b.phone.replace(/\s/g, "")}`} className="mt-1 block text-sm text-foreground hover:text-primary">
-                  {b.phone}
-                </a>
-              )}
-            </div>
-          ))}
+
+        <div className="mt-10">
+          <h3 className="font-display text-lg font-semibold text-primary">
+            {t("contact.subBranchesRatnapura")}
+          </h3>
+          <BranchGrid items={SUB_BRANCHES_RATNAPURA} />
+        </div>
+
+        <div className="mt-10">
+          <h3 className="font-display text-lg font-semibold text-primary">
+            {t("contact.subBranchesKegalle")}
+          </h3>
+          <BranchGrid items={SUB_BRANCHES_KEGALLE} />
         </div>
       </section>
 
       {/* Contact form */}
       <section className="bg-secondary/50 py-16">
         <div className="container-narrow max-w-2xl">
-          <h2 className="font-display text-2xl font-bold text-primary">Send us a Message</h2>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Fill in the form and our team will respond to your query.
-          </p>
+          <h2 className="font-display text-2xl font-bold text-primary">{t("contact.sendMessage")}</h2>
+          <p className="mt-1 text-sm text-muted-foreground">{t("contact.sendMessageNote")}</p>
           <ContactForm />
         </div>
       </section>
@@ -139,6 +166,7 @@ function Contact() {
 }
 
 function ContactForm() {
+  const { t } = useTranslation();
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -148,7 +176,7 @@ function ContactForm() {
         e.preventDefault();
         const fd = new FormData(e.currentTarget);
         if (!fd.get("name") || !fd.get("email") || !fd.get("message")) {
-          setError("Please fill in your name, email and message.");
+          setError(t("contact.form.error"));
           return;
         }
         setError(null);
@@ -158,13 +186,13 @@ function ContactForm() {
       className="mt-6 space-y-4 rounded-xl border border-border bg-card p-6"
     >
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field name="name" label="Your Name" required />
-        <Field name="email" label="Your Email" type="email" required />
+        <Field name="name" label={t("contact.form.name")} required />
+        <Field name="email" label={t("contact.form.email")} type="email" required />
       </div>
-      <Field name="subject" label="Subject" />
+      <Field name="subject" label={t("contact.form.subject")} />
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium">
-          Your Message <span className="text-primary">*</span>
+          {t("contact.form.message")} <span className="text-primary">*</span>
         </label>
         <textarea
           id="message"
@@ -177,14 +205,14 @@ function ContactForm() {
       {error && <p className="text-sm text-destructive">{error}</p>}
       {sent && (
         <p className="rounded-md bg-primary-soft px-4 py-3 text-sm text-primary">
-          Thank you — your message has been recorded. We will get back to you shortly.
+          {t("contact.form.success")}
         </p>
       )}
       <button
         type="submit"
         className="rounded-md bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-elegant transition hover:bg-primary-dark"
       >
-        Send Message
+        {t("contact.form.send")}
       </button>
     </form>
   );

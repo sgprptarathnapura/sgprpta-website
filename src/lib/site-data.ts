@@ -1,80 +1,56 @@
-import logo from "@/assets/bus.png";
-
 export const SITE = {
-  name: "Sabaragamuwa Provincial Road Passenger Transport Authority",
-  shortName: "SGPRPTA",
+  name: "Sabaragamuwa Road Passenger Transport Authority",
+  shortName: "SGRPTA",
   tagline: "Reliable and Quality passenger transport in Sabaragamuwa",
   facebook: "https://www.facebook.com/share/1EWsfWbS5K/",
 };
 
-export { logo };
+// External Google Drive folders — updated Nov 2025.
+export const FARE_TABLES_URL =
+  "https://drive.google.com/drive/folders/1jKOGu-yYGdJDFWtg-c1lo4-d0nUCQKtt";
+export const BUS_TIMETABLE_URL =
+  "https://drive.google.com/drive/folders/14rU5DvrDFV2GJAGI1kfiB871c6MNUsWl";
 
-export const NOTICES = [
-  {
-    title: "New Recruiting 2025.10.23 – 2025.11.12",
-    href: "https://sgprpta.sg.gov.lk/wp-content/uploads/2025/10/%E0%B6%9A%E0%B7%85%E0%B6%B8%E0%B6%B1%E0%B7%8F%E0%B6%9A%E0%B6%BB%E0%B7%94-%E0%B6%B8%E0%B7%99%E0%B7%84%E0%B7%99%E0%B6%BA%E0%B7%94%E0%B6%B8%E0%B7%8A-2.pdf",
-    tag: "Recruitment",
-  },
-  {
-    title: "Annual Bus Fare Revision 2025/07/04",
-    href: "https://sgprpta.sg.gov.lk/wp-content/uploads/2025/07/Annual-Bus-Fare-Revision-2025.pdf",
-    tag: "Fare Revision",
-  },
-];
-
+// Leadership: roleKey drives i18n label; name stays as proper noun.
 export const LEADERSHIP = [
-  { role: "The Governor", name: "Mrs. Champa Janaki Rajarathne" },
-  { role: "The Chairman", name: "Mr. Leelananda Kaluthota" },
-  { role: "General Manager(Acting)", name: "Mr. Thusitha Jayasena" },
-];
-
-export const MAIN_FUNCTIONS = [
-  {
-    title: "Regulation of Passenger Transport",
-    body: "Passenger transport is a power vested in the Provincial Council since 1987, with provisions under Act No. 1 of 1994 for the establishment of this Authority.",
-  },
-  {
-    title: "Increasing Passenger Safety",
-    body: "Providing security for passengers travelling in the province, subject to NTC regulations, provincial statutes and rules of the Sabaragamuwa Provincial Council.",
-  },
-  {
-    title: "Quality Passenger Transport",
-    body: "Improving in-bus service, running training programmes for drivers and conductors, and shaping the attitudes of employees toward the travelling public.",
-  },
-  {
-    title: "Employee Welfare",
-    body: "Introducing welfare programmes for staff and maintaining funds for charity work across the province.",
-  },
-];
+  { roleKey: "governor", name: "Mrs. Champa Janaki Rajarathne" },
+  { roleKey: "chairman", name: "Mr. Leelananda Kaluthota" },
+  { roleKey: "gm", name: "Mr. Thusitha Jayasena" },
+] as const;
 
 export const COMPLAINTS = {
   ratnapura: ["070 438 6096", "045 2230557"],
   kegalle: ["076 097 3888", "035 2222307"],
 };
 
+// Duplicated across the two districts as requested (real split TBD).
 export const STATS = [
-  { label: "Bus Drivers", value: "1,007" },
-  { label: "Bus Conductors", value: "939" },
-  { label: "Buses", value: "990" },
-  { label: "Bus Owners", value: "780" },
-];
+  { key: "drivers", value: "1,007" },
+  { key: "conductors", value: "939" },
+  { key: "buses", value: "990" },
+  { key: "owners", value: "780" },
+] as const;
 
 export const BOARD = [
-  { name: "Mr. M.A. Pushpakumara Danasekara", phone: "+94 76 330 6777" },
+  { name: "Mr. L. Kaluthota", phone: "+94 717398763" },
   { name: "Mr. K. Palitha Kalugama", phone: "+94 71 801 4639" },
   { name: "Mr. H.A.D. Hettiarachchi", phone: "+94 71 442 6337" },
-  { name: "Mr. M.R.S.K. Nishakantha", phone: "+94 71 807 4255" },
-  { name: "Ms. Wijitha Samarasinghe", phone: "+94 71 823 8368" },
+  { name: "Mr. M.R.S.K. Nisakantha", phone: "+94 71 807 4255" },
+  { name: "Ms. W.R.S.K. Weerasekara", phone: "+94 71 444 0680" },
   { name: "Mr. P. Danasekara", phone: "+94 76 128 8688" },
   { name: "Mr. G. Shantha Ajith", phone: "+94 71 448 2485" },
   { name: "Mrs. Shamedani Matharahewa", phone: "+94 71 990 5040" },
-  { name: "Mr. W.R.S.K. Weerasekara", phone: "+94 71 444 0680" },
-  { name: "Mr. D.M.W.B. Delpitiya", phone: "+94 76 330 6777" },
+  { name: "Mr. K.P.M. Gunarathna", phone: "+94 71 859 2618" },
+  { name: "Mr. M.G. Wijerathna", phone: "+94 70 278 1747" },
+  { name: "Mr. H.W. Roopasinghe", phone: "+94 71 443 0797" },
+  { name: "Mr. H.A.N.T.K. Jayasena ", phone: "+94 71 513 1303" },
+  { name: "Mr. D.M.W.B. Delpitiya ", phone: "+94 76 330 6777" },
+  
 ];
 
 export const INFO_OFFICER = {
   name: "Mr. Thusitha Jayasena",
-  role: "Information Officer / Main Coordinator",
+  role: "Information Officer / General Manager(Acting)",
   mobile: "+94 71 513 1303",
   phones: ["035 2232295", "045 2222085"],
 };
@@ -85,84 +61,14 @@ export const RTI_OFFICER = {
   mobile: "+94 71 439 6696",
   phones: ["+94 45 2230557", "+94 35 2232295"],
   fax: "+94 45 2222085",
-  email: "sgprptarathnapura@gmail.com",
+  email: "sprptarathnapura@gmail.com",
 };
-
-export const SERVICES = [
-  {
-    title: "Passenger and Cargo Transportation",
-    items: [
-      "Take action on passenger and cargo transportation",
-      "Setting standards for passenger and goods transport and imposing regulations",
-      "Passenger transport service routes and regulations governing the use of motor vehicles",
-      "Check the suitability of vehicles used for passenger and goods transportation",
-      "Investigating the fulfilment of passenger transport activity",
-      "Imposition of regulations relating to passenger transport",
-      "Passengers travelling in three-wheelers",
-      "Freight Transport License permits and regulations",
-      "Checking illegal passenger and goods transportation",
-    ],
-  },
-  {
-    title: "Common Services",
-    items: [
-      "Issue of permits and regulations",
-      "Providing information",
-      "Tariff setting",
-      "School transport services",
-      "Providing permits on documents other than a vehicle that is not a bus",
-      "Maintaining records",
-      "Acquisition of property",
-      "Imposition of service fees",
-      "Donations and contracts",
-    ],
-  },
-  {
-    title: "Services of Buses",
-    items: [
-      "Designing of bus terminus name boards",
-      "Specifying the documents in the bus",
-      "Registration of drivers and conductors",
-      "Designation of permit conditions",
-      "Issue of leaflets and logs",
-      "Managing bus stations and bus halts",
-      "Management of bus stops",
-    ],
-  },
-  {
-    title: "Services of the Staff",
-    items: [
-      "Administration and discipline of employees",
-      "Providing welfare and other relief assistance to members and employees",
-      "Training programmes for drivers and conductors",
-      "Attitudinal development for public-facing staff",
-      "Recruitment and promotions",
-      "Handling grievances and appeals",
-      "Retirement and pension co-ordination",
-    ],
-  },
-];
-
-export const BUS_TIMETABLE = [
-  { route: "122", from: "Ratnapura", to: "Colombo (via Avissawella)", departure: "05:30", arrival: "08:45", type: "Semi-Luxury", days: "Daily" },
-  { route: "122", from: "Ratnapura", to: "Colombo (via Avissawella)", departure: "07:15", arrival: "10:30", type: "Normal", days: "Daily" },
-  { route: "125", from: "Kegalle", to: "Colombo", departure: "05:45", arrival: "08:15", type: "Semi-Luxury", days: "Daily" },
-  { route: "125", from: "Kegalle", to: "Colombo", departure: "09:00", arrival: "11:30", type: "Normal", days: "Daily" },
-  { route: "34", from: "Ratnapura", to: "Embilipitiya", departure: "06:00", arrival: "08:00", type: "Normal", days: "Daily" },
-  { route: "34", from: "Ratnapura", to: "Embilipitiya", departure: "13:15", arrival: "15:15", type: "Normal", days: "Daily" },
-  { route: "44", from: "Ratnapura", to: "Balangoda", departure: "06:30", arrival: "07:45", type: "Normal", days: "Daily" },
-  { route: "44", from: "Ratnapura", to: "Balangoda", departure: "12:00", arrival: "13:15", type: "Normal", days: "Daily" },
-  { route: "62", from: "Kegalle", to: "Kandy", departure: "06:15", arrival: "07:45", type: "Semi-Luxury", days: "Daily" },
-  { route: "62", from: "Kegalle", to: "Kandy", departure: "10:45", arrival: "12:15", type: "Normal", days: "Daily" },
-  { route: "17", from: "Ratnapura", to: "Kalawana", departure: "07:00", arrival: "08:30", type: "Normal", days: "Daily" },
-  { route: "17", from: "Ratnapura", to: "Kalawana", departure: "14:30", arrival: "16:00", type: "Normal", days: "Daily" },
-];
 
 // HEAD OFFICE: Ratnapura · DISTRICT OFFICE: Kegalle
 export const OFFICES = [
   {
     key: "ratnapura",
-    title: "Head Office — Ratnapura",
+    titleKey: "offices.head",
     address: [
       "Sabaragamuwa Road Passenger Transport Authority",
       "Provincial Council Complex, New Town",
@@ -170,23 +76,22 @@ export const OFFICES = [
     ],
     phones: ["+94 45 222 2085", "+94 45 223 0557"],
     fax: "+94 45 223 0557",
-    email: "sgprptarathnapura@gmail.com",
+    email: "sprptarathnapura@gmail.com",
     mapQuery: "Provincial Council Complex New Town Ratnapura",
   },
   {
     key: "kegalle",
-    title: "District Office — Kegalle",
+    titleKey: "offices.district",
     address: ["Sabaragamuwa Road Passenger Transport Authority", "Rathambalawatta", "Kegalle"],
     phones: ["+94 35 223 2295"],
     fax: "+94 35 222 2307",
     email: "sgprptakegalle@gmail.com",
     mapQuery: "Sabaragamuwa Road Passenger Transport Authority Rathambalawatta Kegalle",
   },
-];
+] as const;
 
-
-// De-duplicated (BA §2.4: Ratnapura was listed 3x).
-export const SUB_BRANCHES = [
+// Ratnapura district branches — Ratnapura → Eheliyagoda.
+export const SUB_BRANCHES_RATNAPURA = [
   { town: "Ratnapura", stand: "Central Bus Stand, Ratnapura", phone: "045 2226486" },
   { town: "Nivithigala", stand: "Central Bus Stand, Nivithigala" },
   { town: "Balangoda", stand: "Central Bus Stand, Balangoda" },
@@ -196,6 +101,10 @@ export const SUB_BRANCHES = [
   { town: "Rakwana", stand: "Central Bus Stand, Rakwana" },
   { town: "Embilipitiya", stand: "Central Bus Stand, Embilipitiya" },
   { town: "Eheliyagoda", stand: "Central Bus Stand, Eheliyagoda" },
+];
+
+// Kegalle district branches — Warakapola → Nelumdeniya.
+export const SUB_BRANCHES_KEGALLE = [
   { town: "Warakapola", stand: "Central Bus Stand, Warakapola" },
   { town: "Wariyapola", stand: "Central Bus Stand, Wariyapola" },
   { town: "Algama", stand: "Central Bus Stand, Algama" },
@@ -213,36 +122,36 @@ export const SUB_BRANCHES = [
 ];
 
 export const NAV = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/services", label: "Services" },
-  { to: "/information-act", label: "Information Act" },
-  { to: "/staff", label: "Staff" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", key: "home", label: "Home" },
+  { to: "/about", key: "about", label: "About" },
+  { to: "/services", key: "services", label: "Services" },
+  { to: "/information-act", key: "information-act", label: "Information Act" },
+  { to: "/staff", key: "staff", label: "Staff" },
+  { to: "/contact", key: "contact", label: "Contact" },
 ] as const;
 
 const avatar = (name: string) =>
   `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=6b1220&color=f6c352&size=256&bold=true&format=png`;
 
-// Updated from official staff list (name_list.docx).
+// Position keys map to translation entries under `positions.*`.
 export const STAFF = [
-  { name: "H. N. T. K. Jayasena", position: "General Manager (Acting)", photo: avatar("H N T K Jayasena") },
-  { name: "D. L. T. M. Disanayaka", position: "Operational Manager", photo: avatar("D L T M Disanayaka") },
-  { name: "K. M. Udeshika Madubhashini", position: "Chief Management Service Officer", photo: avatar("Udeshika Madubhashini") },
-  { name: "S. A. Swarnalatha", position: "Management Service Officer", photo: avatar("S A Swarnalatha") },
-  { name: "J. M. Pramila Niroshani Jayasekara", position: "Management Service Officer", photo: avatar("P N Jayasekara") },
-  { name: "Nilusha Dilrukshi Godawitharana", position: "Management Service Officer", photo: avatar("N D Godawitharana") },
-  { name: "M. A. Chamari Nowadani Mallikaarachchi", position: "Management Service Officer", photo: avatar("C N Mallikaarachchi") },
-  { name: "N. K. Nandani Sujatha", position: "Management Service Officer", photo: avatar("N K N Sujatha") },
-  { name: "K. K. Anusha Damayanthi", position: "Management Service Officer", photo: avatar("A K Damayanthi") },
-  { name: "R. A. Nadika Lalani", position: "Management Service Officer", photo: avatar("R A N Lalani") },
-  { name: "H. M. Buddhika Gunathilaka", position: "Management Service Officer", photo: avatar("B M Gunathilaka") },
-  { name: "M. L. Thamali Dhanushika", position: "Management Service Officer", photo: avatar("T L Dhanushika") },
-  { name: "D. H. A. Harsha Medhani Wickramasinghe", position: "Management Service Officer", photo: avatar("H M Wickramasinghe") },
-  { name: "H. B. N. D. Somarathna", position: "Management Service Officer", photo: avatar("H B N D Somarathna") },
-  { name: "R. R. L. Jayawardhana", position: "Management Service Officer", photo: avatar("R R L Jayawardhana") },
-  { name: "H. M. Sumith Karunarathna", position: "Management Service Officer", photo: avatar("S M Karunarathna") },
-  { name: "W. M. Munasinghe", position: "Office Assistant", photo: avatar("W M Munasinghe") },
-  { name: "M. W. K. Tilakarathna", position: "Office Assistant", photo: avatar("M W K Tilakarathna") },
-  { name: "T. M. Harsha Lakruwan", position: "Driver", photo: avatar("T M Harsha Lakruwan") },
+  { name: "H. N. T. K. Jayasena", positionKey: "gm_acting", photo: avatar("H N T K Jayasena") },
+  { name: "D. L. T. M. Disanayaka", positionKey: "operational_manager", photo: avatar("D L T M Disanayaka") },
+  { name: "K. M. Udeshika Madubhashini", positionKey: "chief_mso", photo: avatar("Udeshika Madubhashini") },
+  { name: "S. A. Swarnalatha", positionKey: "mso", photo: avatar("S A Swarnalatha") },
+  { name: "J. M. Pramila Niroshani Jayasekara", positionKey: "mso", photo: avatar("P N Jayasekara") },
+  { name: "Nilusha Dilrukshi Godawitharana", positionKey: "mso", photo: avatar("N D Godawitharana") },
+  { name: "M. A. Chamari Nowadani Mallikaarachchi", positionKey: "mso", photo: avatar("C N Mallikaarachchi") },
+  { name: "N. K. Nandani Sujatha", positionKey: "mso", photo: avatar("N K N Sujatha") },
+  { name: "K. K. Anusha Damayanthi", positionKey: "mso", photo: avatar("A K Damayanthi") },
+  { name: "R. A. Nadika Lalani", positionKey: "mso", photo: avatar("R A N Lalani") },
+  { name: "H. M. Buddhika Gunathilaka", positionKey: "mso", photo: avatar("B M Gunathilaka") },
+  { name: "M. L. Thamali Dhanushika", positionKey: "mso", photo: avatar("T L Dhanushika") },
+  { name: "D. H. A. Harsha Medhani Wickramasinghe", positionKey: "mso", photo: avatar("H M Wickramasinghe") },
+  { name: "H. B. N. D. Somarathna", positionKey: "mso", photo: avatar("H B N D Somarathna") },
+  { name: "R. R. L. Jayawardhana", positionKey: "mso", photo: avatar("R R L Jayawardhana") },
+  { name: "H. M. Sumith Karunarathna", positionKey: "mso", photo: avatar("S M Karunarathna") },
+  { name: "W. M. Munasinghe", positionKey: "office_assistant", photo: avatar("W M Munasinghe") },
+  { name: "M. W. K. Tilakarathna", positionKey: "office_assistant", photo: avatar("M W K Tilakarathna") },
+  { name: "T. M. Harsha Lakruwan", positionKey: "driver", photo: avatar("T M Harsha Lakruwan") },
 ];

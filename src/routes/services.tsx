@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "./about";
-import { SERVICES } from "@/lib/site-data";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -19,16 +19,21 @@ export const Route = createFileRoute("/services")({
   component: Services,
 });
 
+type ServiceCategory = { title: string; items: string[] };
+
 function Services() {
+  const { t } = useTranslation();
+  const services = (t("servicesList", { returnObjects: true }) as ServiceCategory[]) ?? [];
+
   return (
     <SiteLayout>
       <PageHero
-        title="Our Services"
-        subtitle="Effective, efficient service driven by results-based management, public relations and team spirit."
+        title={t("services.title")}
+        subtitle={t("services.subtitle")}
       />
       <section className="container-narrow py-16">
         <div className="grid gap-8 md:grid-cols-2">
-          {SERVICES.map((cat) => (
+          {services.map((cat) => (
             <article
               key={cat.title}
               className="rounded-xl border border-border bg-card p-6 shadow-sm"

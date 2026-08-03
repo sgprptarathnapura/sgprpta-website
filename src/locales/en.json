@@ -1,0 +1,230 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "information-act": "Information",
+    "staff": "Staff",
+    "contact": "Contact"
+  },
+  "header": {
+    "province": "Sabaragamuwa Provincial Council · Sri Lanka",
+    "complaints": "Complaints",
+    "ratnapura": "Ratnapura",
+    "kegalle": "Kegalle"
+  },
+  "footer": {
+    "tagline": "Regulating and improving public passenger transport across Sabaragamuwa Province.",
+    "headOffice": "Head Office",
+    "districtOffice": "District Office",
+    "quickLinks": "Quick Links",
+    "facebook": "Facebook",
+    "copyright": "©2026 Sabaragamuwa Road Passenger Transport Authority",
+    "govNote": "Government of Sri Lanka · Sabaragamuwa Province"
+  },
+  "home": {
+    "eyebrow": "Government of Sri Lanka · Sabaragamuwa Province",
+    "title": "Sabaragamuwa Road Passenger Transport Authority",
+    "tagline": "Reliable and Quality passenger transport in Sabaragamuwa",
+    "cta": {
+      "services": "Explore Services",
+      "staff": "Meet Our Staff",
+      "contact": "Contact & Complaints"
+    },
+    "leadership": { "eyebrow": "Our Leadership", "title": "The people who guide the Authority" },
+    "functions": { "eyebrow": "Main Functions", "title": "What the Authority does" },
+    "stats": {
+      "eyebrow": "By the Numbers",
+      "title": "Serving Sabaragamuwa",
+      "ratnapura": "Ratnapura District",
+      "kegalle": "Kegalle District"
+    },
+    "complaints": { "eyebrow": "Report an Issue", "title": "Complaint Hotlines" },
+    "district": { "ratnapura": "Ratnapura District", "kegalle": "Kegalle District" }
+  },
+  "leadership": {
+    "governor": "The Governor",
+    "chairman": "The Chairman",
+    "gm": "General Manager(Acting)"
+  },
+  "functions": [
+    {
+      "title": "Regulation of Passenger Transport",
+      "body": "Passenger transport is a power vested in the Provincial Council since 1987, with provisions under Act No. 1 of 1994 for the establishment of this Authority."
+    },
+    {
+      "title": "Increasing Passenger Safety",
+      "body": "Providing security for passengers travelling in the province, subject to NTC regulations, provincial statutes and rules of the Sabaragamuwa Provincial Council."
+    },
+    {
+      "title": "Quality Passenger Transport",
+      "body": "Improving in-bus service, running training programmes for drivers and conductors, and shaping the attitudes of employees toward the travelling public."
+    },
+    {
+      "title": "Employee Welfare",
+      "body": "Introducing welfare programmes for staff and maintaining funds for charity work across the province."
+    }
+  ],
+  "servicesList": [
+    {
+      "title": "Passenger and Cargo Transportation",
+      "items": [
+        "Take action on passenger and cargo transportation",
+        "Setting standards for passenger and goods transport and imposing regulations",
+        "Passenger transport service routes and regulations governing the use of motor vehicles",
+        "Check the suitability of vehicles used for passenger and goods transportation",
+        "Investigating the fulfilment of passenger transport activity",
+        "Imposition of regulations relating to passenger transport",
+        "Passengers travelling in three-wheelers",
+        "Freight Transport License permits and regulations",
+        "Checking illegal passenger and goods transportation"
+      ]
+    },
+    {
+      "title": "Common Services",
+      "items": [
+        "Issue of permits and regulations",
+        "Providing information",
+        "Tariff setting",
+        "School transport services",
+        "Providing permits on documents other than a vehicle that is not a bus",
+        "Maintaining records",
+        "Acquisition of property",
+        "Imposition of service fees",
+        "Donations and contracts"
+      ]
+    },
+    {
+      "title": "Services of Buses",
+      "items": [
+        "Designing of bus terminus name boards",
+        "Specifying the documents in the bus",
+        "Registration of drivers and conductors",
+        "Designation of permit conditions",
+        "Issue of leaflets and logs",
+        "Managing bus stations and bus halts",
+        "Management of bus stops"
+      ]
+    },
+    {
+      "title": "Services of the Staff",
+      "items": [
+        "Administration and discipline of employees",
+        "Providing welfare and other relief assistance to members and employees",
+        "Training programmes for drivers and conductors",
+        "Attitudinal development for public-facing staff",
+        "Recruitment and promotions",
+        "Handling grievances and appeals",
+        "Retirement and pension co-ordination"
+      ]
+    }
+  ],
+  "positions": {
+    "gm_acting": "General Manager (Acting)",
+    "operational_manager": "Operational Manager",
+    "chief_mso": "Chief Management Service Officer",
+    "mso": "Management Service Officer",
+    "office_assistant": "Office Assistant",
+    "driver": "Driver"
+  },
+  "stats": {
+    "drivers": "Bus Drivers",
+    "conductors": "Bus Conductors",
+    "buses": "Buses",
+    "owners": "Bus Owners"
+  },
+  "offices": {
+    "head": "Head Office — Ratnapura",
+    "district": "District Office — Kegalle"
+  },
+  "about": {
+    "title": "About the Authority",
+    "subtitle": "Board of Directors, history, mandate and statistics.",
+    "story": { "eyebrow": "Our Story", "title": "History & Current Situation" },
+    "p1": "The Sabaragamuwa Provincial Road Passenger Transport Authority was established by the relevant charter under Act No. 1 of 1994, following the vesting of passenger-transport powers in the Provincial Council in 1987.",
+    "p2": "The institute operates under the Chief Ministry of the Sabaragamuwa Provincial Council and serves passengers, bus owners, drivers, conductors and staff of the transport authority. The Head Office is in Ratnapura and the District Office is in Kegalle.",
+    "board": { "eyebrow": "Leadership", "title": "Board of Directors" },
+    "member": "Member",
+    "mobile": "Mobile",
+    "mandate": { "eyebrow": "Mandate", "title": "Main Functions in Detail" },
+    "figures": {
+      "eyebrow": "Statistical Figures",
+      "title": "The Authority at a Glance",
+      "ratnapura": "Ratnapura District",
+      "kegalle": "Kegalle District"
+    },
+    "infoOfficerRole": "Information Officer / Generl Manager(Acting)"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Effective, efficient service driven by results-based management, public relations and team spirit."
+  },
+  "rti": {
+    "title": "Right to Information",
+    "subtitle": "Transparency of public institutions maintained by the tax monies of the people.",
+    "heading": "Right to Information Act",
+    "p1": "With the establishment of republic states, a concept which denotes that the ownership of the state lies with the people was evolved. State and public institutions are maintained by the tax monies of the people — the fundamental principle being that the people have the right to know how the functions of the state are accomplished using public funds.",
+    "moreInfo": "For More Information",
+    "moreInfoDesc": "Official RTI documents will be published here once verified copies are received from SGPRPTA. In the meantime, the following external resources are authoritative:",
+    "fareTitle": "Bus Fare Tables",
+    "fareDesc": "The complete annual bus fare tables are maintained on Google Drive. Click below to open the official folder in a new tab and view or download the current fare tables.",
+    "fareCta": "Open Bus Fare Tables on Google Drive",
+    "timetableTitle": "Bus Time Tables",
+    "timetableDesc": "Official bus route timetables for Sabaragamuwa Province are maintained on Google Drive. Click below to open the folder and view the latest timetables.",
+    "timetableCta": "Open Bus Time Tables on Google Drive",
+    "vacanciesTitle": "Vacancies",
+    "vacanciesDesc": "Current job openings at the Authority. Click a role to see full details.",
+    "vacanciesEmpty": "No any vacancies available now.",
+    "vacancyRequirements": "Requirements",
+    "vacancyLocation": "Location",
+    "vacancySalary": "Salary",
+    "vacancyDeadline": "Application Deadline",
+    "officer": "Responsible Officer",
+    "officerRole": "Information Officer — General Manager(Acting)",
+    "phone": "Phone",
+    "fax": "Fax",
+    "email": "Email"
+  },
+  "staff": {
+    "title": "Our Staff",
+    "subtitle": "The team delivering reliable and quality passenger transport across Sabaragamuwa.",
+    "gmEyebrow": "Leadership",
+    "gmTitle": "General Manager",
+    "hoEyebrow": "Head Office",
+    "hoTitle": "Ratnapura — Head Office Staff",
+    "doEyebrow": "District Office",
+    "doTitle": "Kegalle — District Office Staff",
+    "note": "* Meet the team behind Sabaragamuwa's passenger transport services."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Reach the right office quickly — head office, district office or your nearest sub-branch.",
+    "address": "Address",
+    "phone": "Phone",
+    "fax": "Fax",
+    "email": "Email",
+    "viewMap": "View on Google Maps",
+    "hotlines": "Complaint Hotlines",
+    "hotlinesNote": "Report bus service issues directly to the district you are travelling in.",
+    "subBranches": "Sub-Branches Across the Province",
+    "subBranchesNote": "Transport Authority sub-branches at central bus stands. ({{count}} locations)",
+    "subBranchesRatnapura": "Ratnapura District Branches",
+    "subBranchesKegalle": "Kegalle District Branches",
+    "sendMessage": "Send us a Message",
+    "sendMessageNote": "Fill in the form and our team will respond to your query.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "error": "Please fill in your name, email and message.",
+      "success": "Thank you — your message has been recorded. We will get back to you shortly."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "This page doesn't exist or has been moved.",
+    "return": "Return home"
+  }
+}

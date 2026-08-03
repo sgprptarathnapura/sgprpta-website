@@ -1,0 +1,32 @@
+{
+    "vacancies": [
+        {
+            "id": 1,
+            "title": "Driver",
+            "description": "We are seeking a skilled and experienced driver to join our team. The ideal candidate will have a valid driver's license, a clean driving record, and a strong knowledge of traffic laws and regulations. Responsibilities include safely transporting passengers, maintaining the vehicle, and providing excellent customer service.",
+            "requirements": [
+                "Valid driver's license",
+                "Clean driving record",
+                "Knowledge of traffic laws and regulations",
+                "Excellent customer service skills"
+            ],
+            "location": "Ratnapura, Sabaragamuwa Province, Sri Lanka",
+            "salary": "Negotiable based on experience",
+            "applicationDeadline": "2024-07-31"
+        },
+        {
+            "id": 2,
+            "title": "Conductor",
+            "description": "We are looking for a friendly and responsible conductor to join our team. The ideal candidate will have excellent communication skills, a positive attitude, and the ability to handle cash transactions accurately. Responsibilities include assisting passengers, collecting fares, and ensuring a safe and comfortable journey.",
+            "requirements": [
+                "Excellent communication skills",
+                "Positive attitude and customer service orientation",
+                "Ability to handle cash transactions accurately",
+                "Knowledge of bus routes and schedules"
+            ],
+            "location": "Kegalle, Sabaragamuwa Province, Sri Lanka",
+            "salary": "Negotiable based on experience",
+            "applicationDeadline": "2024-08-15"
+        }
+    ]
+}
