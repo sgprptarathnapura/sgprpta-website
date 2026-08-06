@@ -13,7 +13,7 @@ export const LANG_LABEL: Record<Lang, string> = {
   ta: "தமிழ்",
 };
 
-export const LANG_STORAGE_KEY = "sgprpta-lang";
+export const LANG_STORAGE_KEY = "sgrpta-lang";
 
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({

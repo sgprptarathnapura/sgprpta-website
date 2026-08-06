@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/SiteLayout";
 import { SectionHeading } from "./index";
-import { BOARD, INFO_OFFICER, STATS } from "@/lib/site-data";
+import { BOARD, INFO_OFFICER, STATS_BY_DISTRICT } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -107,7 +107,7 @@ function About() {
                   {t(`about.figures.${district}`)}
                 </h3>
                 <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
-                  {STATS.map((s) => (
+                  {STATS_BY_DISTRICT[district].map((s) => (
                     <div
                       key={`${district}-${s.key}`}
                       className="rounded-xl border border-white/15 bg-white/5 p-6 text-center backdrop-blur"
@@ -130,7 +130,7 @@ export function PageHero({ title, subtitle }: { title: string; subtitle: string 
   return (
     <section className="bg-[image:var(--gradient-hero)] py-14 text-primary-foreground">
       <div className="container-narrow">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">SGPRPTA</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">SGRPTA</p>
         <h1 className="mt-2 font-display text-4xl font-bold sm:text-5xl">{title}</h1>
         <p className="mt-3 max-w-2xl text-white/85">{subtitle}</p>
       </div>

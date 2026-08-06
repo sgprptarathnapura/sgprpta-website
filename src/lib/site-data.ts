@@ -23,13 +23,25 @@ export const COMPLAINTS = {
   kegalle: ["076 097 3888", "035 2222307"],
 };
 
-// Duplicated across the two districts as requested (real split TBD).
-export const STATS = [
+// Per-district statistics (Kegalle figures from the District Office name list, Aug 2026).
+export const STATS_RATNAPURA = [
   { key: "drivers", value: "1,007" },
   { key: "conductors", value: "939" },
   { key: "buses", value: "990" },
   { key: "owners", value: "780" },
 ] as const;
+
+export const STATS_KEGALLE = [
+  { key: "drivers", value: "880" },
+  { key: "conductors", value: "855" },
+  { key: "buses", value: "824" },
+  { key: "owners", value: "730" },
+] as const;
+
+export const STATS_BY_DISTRICT = {
+  ratnapura: STATS_RATNAPURA,
+  kegalle: STATS_KEGALLE,
+} as const;
 
 export const BOARD = [
   { name: "Mr. L. Kaluthota", phone: "+94 717398763" },
@@ -155,3 +167,25 @@ export const STAFF = [
   { name: "M. W. K. Tilakarathna", positionKey: "office_assistant", photo: avatar("M W K Tilakarathna") },
   { name: "T. M. Harsha Lakruwan", positionKey: "driver", photo: avatar("T M Harsha Lakruwan") },
 ];
+
+// Kegalle District Office staff — official name list.
+export const STAFF_KEGALLE = [
+  { name: "N.D.R.P. Jayarathna", positionKey: "district_manager", photo: avatar("N D R P Jayarathna") },
+  { name: "W.D.J. Sanjeewa", positionKey: "operational_manager", photo: avatar("W D J Sanjeewa") },
+  { name: "J.D. Nimal Jayawardhana", positionKey: "transport_manager", photo: avatar("J D Nimal Jayawardhana") },
+  { name: "G.D.M. Weerasinghe", positionKey: "chief_mso", photo: avatar("G D M Weerasinghe") },
+  { name: "W.A.D.R. Priyanka Wijesooriya", positionKey: "mso", photo: avatar("W A D R P Wijesooriya") },
+  { name: "G.V.K. Nilakshi Vidanage", positionKey: "mso", photo: avatar("G V K N Vidanage") },
+  { name: "B.B.G.RA.T. Bakmeedeniya", positionKey: "mso", photo: avatar("B B G T Bakmeedeniya") },
+  { name: "R.W.A. Senali Shyamalika", positionKey: "mso", photo: avatar("R W A S Shyamalika") },
+  { name: "W.A. Shyamalee Bopitiya", positionKey: "mso", photo: avatar("W A S Bopitiya") },
+  { name: "W.N.N.K. Witharana", positionKey: "mso", photo: avatar("W N N K Witharana") },
+  { name: "A.G. Upajeewa Madhusanka", positionKey: "mso", photo: avatar("A G U Madhusanka") },
+  { name: "H.A. Madhurika Kumari Hettiarachchi", positionKey: "mso", photo: avatar("H A M K Hettiarachchi") },
+  { name: "S. Ruchira Sarath Kumara", positionKey: "mso", photo: avatar("S Ruchira Sarath Kumara") },
+  { name: "W.N.D. Welipitiya", positionKey: "mso", photo: avatar("W N D Welipitiya") },
+  { name: "S.D. Supun Abesinghe", positionKey: "mso", photo: avatar("S D Supun Abesinghe") },
+  { name: "H.R. Sadi Banda", positionKey: "office_assistant", photo: avatar("H R Sadi Banda") },
+  { name: "K.A. Saman Chandana", positionKey: "driver", photo: avatar("K A Saman Chandana") },
+];
+

@@ -1,4 +1,4 @@
-# SGPRPTA Website — TanStack Start (React) scaffold
+# SGRPTA Website — TanStack Start (React) scaffold
 
 This replaces the earlier Next.js scaffold. It mirrors the folder structure of the
 Lovable-generated project (minus `components/ui`, per your supervisor's instruction),

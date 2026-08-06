@@ -76,14 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SGPRPTA — Sabaragamuwa Road Passenger Transport Authority" },
+      { title: "SGRPTA — Sabaragamuwa Road Passenger Transport Authority" },
       {
         name: "description",
         content:
-          "Official website of the Sabaragamuwa Road Passenger Transport Authority (SGPRPTA). Bus regulation, RTI information, notices, and contact details for Ratnapura and Kegalle offices.",
+          "Official website of the Sabaragamuwa Road Passenger Transport Authority (SGRPTA). Bus regulation, RTI information, notices, and contact details for Ratnapura and Kegalle offices.",
       },
-      { name: "author", content: "SGPRPTA" },
-      { property: "og:title", content: "SGPRPTA — Sabaragamuwa Road Passenger Transport Authority" },
+      { name: "author", content: "SGRPTA" },
+      { property: "og:title", content: "SGRPTA — Sabaragamuwa Road Passenger Transport Authority" },
       {
         property: "og:description",
         content:

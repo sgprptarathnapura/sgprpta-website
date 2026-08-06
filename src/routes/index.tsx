@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/SiteLayout";
 import logo from "@/assets/logo.png";
 import heroBuses from "@/assets/bus.png";
-import { LEADERSHIP, COMPLAINTS, STATS } from "@/lib/site-data";
+import { LEADERSHIP, COMPLAINTS, STATS_BY_DISTRICT } from "@/lib/site-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SGPRPTA — Sabaragamuwa Provincial Road Passenger Transport Authority" },
+      { title: "SGRPTA — Sabaragamuwa Provincial Road Passenger Transport Authority" },
       {
         name: "description",
         content:
@@ -125,7 +125,7 @@ function Home() {
                 {t(`home.stats.${district}`)}
               </h3>
               <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
-                {STATS.map((s) => (
+                {STATS_BY_DISTRICT[district].map((s) => (
                   <div
                     key={`${district}-${s.key}`}
                     className="rounded-xl border border-border bg-card p-6 text-center"

@@ -3,21 +3,21 @@ import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "./about";
 import { SectionHeading } from "./index";
-import { STAFF } from "@/lib/site-data";
+import { STAFF, STAFF_KEGALLE } from "@/lib/site-data";
 
 export const Route = createFileRoute("/staff")({
   head: () => ({
     meta: [
-      { title: "Our Staff — SGPRPTA" },
+      { title: "Our Staff — SGRPTA" },
       {
         name: "description",
         content:
           "Meet the staff of the Sabaragamuwa Provincial Road Passenger Transport Authority — General Manager, Head Office (Ratnapura) and District Office (Kegalle).",
       },
-      { property: "og:title", content: "Our Staff — SGPRPTA" },
+      { property: "og:title", content: "Our Staff — SGRPTA" },
       {
         property: "og:description",
-        content: "General Manager, Head Office (Ratnapura) and District Office (Kegalle) teams of SGPRPTA.",
+        content: "General Manager, Head Office (Ratnapura) and District Office (Kegalle) teams of SGRPTA.",
       },
     ],
   }),
@@ -75,15 +75,13 @@ function Staff() {
         <div className="container-narrow py-16">
           <SectionHeading eyebrow={t("staff.doEyebrow")} title={t("staff.doTitle")} />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {others.map((s, i) => (
+            {STAFF_KEGALLE.map((s, i) => (
               <StaffCard key={`do-${i}-${s.name}`} s={s} />
             ))}
           </div>
-          <p className="mx-auto mt-10 max-w-2xl text-center text-xs text-muted-foreground">
-            {t("staff.note")}
-          </p>
         </div>
       </section>
+
     </SiteLayout>
   );
 }

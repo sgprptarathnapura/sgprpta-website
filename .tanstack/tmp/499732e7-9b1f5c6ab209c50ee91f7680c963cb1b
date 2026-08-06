@@ -7,14 +7,14 @@ import { RTI_OFFICER, BUS_TIMETABLE } from "@/lib/site-data";
 export const Route = createFileRoute("/information-act")({
   head: () => ({
     meta: [
-      { title: "Right to Information — SGPRPTA" },
+      { title: "Right to Information — SGRPTA" },
       {
         name: "description",
         content:
           "Right to Information Act — designated Information Officer, contact details and links to the RTI resources of Sri Lanka.",
       },
-      { property: "og:title", content: "Right to Information — SGPRPTA" },
-      { property: "og:description", content: "SGPRPTA RTI officer, downloads and external RTI resources." },
+      { property: "og:title", content: "Right to Information — SGRPTA" },
+      { property: "og:description", content: "SGRPTA RTI officer, downloads and external RTI resources." },
     ],
   }),
   component: InfoAct,
@@ -55,7 +55,7 @@ function InfoAct() {
           </h3>
           <p className="mt-2 text-sm text-muted-foreground">
             Official RTI documents will be published here once verified copies are received from
-            SGPRPTA. In the meantime, the following external resources are authoritative:
+            SGRPTA. In the meantime, the following external resources are authoritative:
           </p>
           <ul className="mt-4 space-y-2">
             {EXTERNAL.map((l) => (

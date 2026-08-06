@@ -82,7 +82,7 @@ function Header() {
       <div className="bg-primary text-primary-foreground text-xs">
         <div className="container-narrow flex flex-col items-center gap-1.5 py-2 text-center sm:flex-row sm:flex-wrap sm:justify-between sm:gap-2 sm:py-1.5 sm:text-left">
           <span className="opacity-90">{t("header.province")}</span>
-          <span className="flex w-full flex-col items-center gap-1.5 opacity-95 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3">
+          <span className="hidden w-full flex-col items-center gap-1.5 opacity-95 sm:flex sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3">
             <span className="font-semibold">{t("header.complaints")}</span>
             <span className="flex w-full flex-col items-stretch gap-1.5 sm:w-auto sm:flex-row sm:items-center sm:gap-3">
               <WhatsAppLink number={COMPLAINTS.ratnapura[0]} label={t("header.ratnapura")} />
@@ -93,7 +93,7 @@ function Header() {
       </div>
      <div className="container-narrow grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-3 md:flex md:justify-between md:gap-4">
         <Link to="/" className="flex min-w-0 items-center gap-3">
-          <img src={logo} alt="SGPRPTA emblem" className="h-10 w-10 shrink-0 rounded-full ring-2 ring-primary/20 sm:h-12 sm:w-12" />
+          <img src={logo} alt="SGRPTA emblem" className="h-10 w-10 shrink-0 rounded-full ring-2 ring-primary/20 sm:h-12 sm:w-12" />
           <div className="min-w-0 leading-tight">
             <div className="truncate font-display text-[15px] font-bold text-primary sm:text-base">
               {SITE.shortName}
@@ -164,7 +164,7 @@ function Footer() {
         <div>
           <div className="flex items-center justify-center gap-3 sm:justify-start">
             <img src={logo} alt="" className="h-10 w-10 rounded-full bg-white p-1" />
-            <span className="font-display font-bold">SGPRPTA</span>
+            <span className="font-display font-bold">SGRPTA</span>
           </div>
           <p className="mt-3 text-sm opacity-80">{t("footer.tagline")}</p>
         </div>
@@ -175,7 +175,7 @@ function Footer() {
             <br />
             +94 45 222 2085
             <br />
-            sgprptarathnapura@gmail.com
+            sprptarathnapura@gmail.com
           </p>
         </div>
         <div>

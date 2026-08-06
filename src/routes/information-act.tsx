@@ -27,14 +27,14 @@ const VACANCIES: Vacancy[] = vacanciesData.vacancies ?? [];
 export const Route = createFileRoute("/information-act")({
   head: () => ({
     meta: [
-      { title: "Right to Information — SGPRPTA" },
+      { title: "Right to Information — SGRPTA" },
       {
         name: "description",
         content:
           "Right to Information Act — designated Information Officer, contact details and links to the RTI resources of Sri Lanka.",
       },
-      { property: "og:title", content: "Right to Information — SGPRPTA" },
-      { property: "og:description", content: "SGPRPTA RTI officer, downloads and external RTI resources." },
+      { property: "og:title", content: "Right to Information — SGRPTA" },
+      { property: "og:description", content: "SGRPTA RTI officer, downloads and external RTI resources." },
     ],
   }),
   component: InfoAct,

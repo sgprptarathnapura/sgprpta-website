@@ -120,6 +120,8 @@
     }
   ],
   "positions": {
+    "district_manager": "District Manager",
+    "transport_manager": "Transport Manager",
     "gm_acting": "General Manager (Acting)",
     "operational_manager": "Operational Manager",
     "chief_mso": "Chief Management Service Officer",
@@ -165,7 +167,7 @@
     "heading": "Right to Information Act",
     "p1": "With the establishment of republic states, a concept which denotes that the ownership of the state lies with the people was evolved. State and public institutions are maintained by the tax monies of the people — the fundamental principle being that the people have the right to know how the functions of the state are accomplished using public funds.",
     "moreInfo": "For More Information",
-    "moreInfoDesc": "Official RTI documents will be published here once verified copies are received from SGPRPTA. In the meantime, the following external resources are authoritative:",
+    "moreInfoDesc": "Official RTI documents will be published here once verified copies are received from SGRPTA. In the meantime, the following external resources are authoritative:",
     "fareTitle": "Bus Fare Tables",
     "fareDesc": "The complete annual bus fare tables are maintained on Google Drive. Click below to open the official folder in a new tab and view or download the current fare tables.",
     "fareCta": "Open Bus Fare Tables on Google Drive",

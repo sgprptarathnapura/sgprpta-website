@@ -6,13 +6,13 @@ import { PageHero } from "./about";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — SGPRPTA" },
+      { title: "Services — SGRPTA" },
       {
         name: "description",
         content:
-          "Services provided by SGPRPTA: passenger and cargo transportation, common services, bus services and staff services.",
+          "Services provided by SGRPTA: passenger and cargo transportation, common services, bus services and staff services.",
       },
-      { property: "og:title", content: "Services — SGPRPTA" },
+      { property: "og:title", content: "Services — SGRPTA" },
       { property: "og:description", content: "Passenger and cargo transportation, common services and staff services." },
     ],
   }),
