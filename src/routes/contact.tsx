@@ -80,10 +80,7 @@ function Contact() {
                     ))}
                   </div>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-primary">{t("contact.fax")}</p>
-                  <p className="mt-1">{o.fax}</p>
-                </div>
+               
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary">{t("contact.email")}</p>

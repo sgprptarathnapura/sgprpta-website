@@ -70,9 +70,8 @@ export const INFO_OFFICER = {
 export const RTI_OFFICER = {
   name: "Mr. Thusitha Jayasena",
   role: "Information Officer — General Manager(Acting)",
-  mobile: "+94 71 439 6696",
+  mobile: "+94 71 513 1303",
   phones: ["+94 45 2230557", "+94 35 2232295"],
-  fax: "+94 45 2222085",
   email: "sprptarathnapura@gmail.com",
 };
 
@@ -87,7 +86,6 @@ export const OFFICES = [
       "Ratnapura",
     ],
     phones: ["+94 45 222 2085", "+94 45 223 0557"],
-    fax: "+94 45 223 0557",
     email: "sprptarathnapura@gmail.com",
     mapQuery: "Provincial Council Complex New Town Ratnapura",
   },
@@ -96,7 +94,6 @@ export const OFFICES = [
     titleKey: "offices.district",
     address: ["Sabaragamuwa Road Passenger Transport Authority", "Rathambalawatta", "Kegalle"],
     phones: ["+94 35 223 2295"],
-    fax: "+94 35 222 2307",
     email: "sgprptakegalle@gmail.com",
     mapQuery: "Sabaragamuwa Road Passenger Transport Authority Rathambalawatta Kegalle",
   },

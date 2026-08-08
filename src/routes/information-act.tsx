@@ -179,7 +179,6 @@ function InfoAct() {
             {RTI_OFFICER.phones.map((p) => (
               <Row key={p} label={t("rti.phone")} value={p} tel />
             ))}
-            <Row label={t("rti.fax")} value={RTI_OFFICER.fax} />
             <Row label={t("rti.email")} value={RTI_OFFICER.email} mail />
           </dl>
         </aside>

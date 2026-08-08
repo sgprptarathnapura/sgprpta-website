@@ -66,56 +66,42 @@
     }
   ],
   "servicesList": [
-    {
-      "title": "Passenger and Cargo Transportation",
+   {
+      "title": "Our Services",
       "items": [
-        "Take action on passenger and cargo transportation",
-        "Setting standards for passenger and goods transport and imposing regulations",
-        "Passenger transport service routes and regulations governing the use of motor vehicles",
-        "Check the suitability of vehicles used for passenger and goods transportation",
-        "Investigating the fulfilment of passenger transport activity",
-        "Imposition of regulations relating to passenger transport",
-        "Passengers travelling in three-wheelers",
-        "Freight Transport License permits and regulations",
-        "Checking illegal passenger and goods transportation"
+        "Issuing new route permits through the tender process",
+        "Renewal and updating of route permits",
+        "“Gemi Sariya” rural transport service",
+        "“Sisu Sariya” school transport service",
+        "Issuing driver and conductor permits",
+        "Issuing the relevant timetables for buses",
+        "Preparing and revising bus fares",
+        "Issuing temporary route permits",
+        "Issuing special tour (excursion) permits",
+        "Issuing ticket books",
+        "Issuing stickers required to be displayed in buses (clergy, expectant mothers, disabled passengers, provincial)",
+        "Issuing entry permits",
+        "Issuing log sheets",
+        "Issuing letters required to obtain financial facilities",
+        "Issuing omnibus letters",
+        "Issuing letters certifying route distances",
+        "Releasing bus terminal premises for promotional activities",
+        "Providing information related to the Authority under the Right to Information Act",
+        "Construction and maintenance of passenger shelters",
+        "Resolving public complaints",
+        "Leasing shop rooms owned by the Authority through the tender process"
       ]
     },
     {
-      "title": "Common Services",
+      "title": "Our Responsibilities",
       "items": [
-        "Issue of permits and regulations",
-        "Providing information",
-        "Tariff setting",
-        "School transport services",
-        "Providing permits on documents other than a vehicle that is not a bus",
-        "Maintaining records",
-        "Acquisition of property",
-        "Imposition of service fees",
-        "Donations and contracts"
-      ]
-    },
-    {
-      "title": "Services of Buses",
-      "items": [
-        "Designing of bus terminus name boards",
-        "Specifying the documents in the bus",
-        "Registration of drivers and conductors",
-        "Designation of permit conditions",
-        "Issue of leaflets and logs",
-        "Managing bus stations and bus halts",
-        "Management of bus stops"
-      ]
-    },
-    {
-      "title": "Services of the Staff",
-      "items": [
-        "Administration and discipline of employees",
-        "Providing welfare and other relief assistance to members and employees",
-        "Training programmes for drivers and conductors",
-        "Attitudinal development for public-facing staff",
-        "Recruitment and promotions",
-        "Handling grievances and appeals",
-        "Retirement and pension co-ordination"
+        "Ensuring buses start their journeys from the assigned bus stand on time and verifying that they reach the destination on schedule",
+        "Recording the log sheet and the entry document at the destination",
+        "Providing a safe, comfortable and quality passenger service within Sabaragamuwa Province",
+        "Inspecting whether buses are roadworthy and fit for service",
+        "Developing a courteous body of drivers and conductors and continuously training them to deliver a quality service",
+        "Keeping the office data system up to date",
+        "Delivering the required service to customers within a short time"
       ]
     }
   ],
@@ -184,7 +170,6 @@
     "officer": "Responsible Officer",
     "officerRole": "Information Officer — General Manager(Acting)",
     "phone": "Phone",
-    "fax": "Fax",
     "email": "Email"
   },
   "staff": {
@@ -203,7 +188,6 @@
     "subtitle": "Reach the right office quickly — head office, district office or your nearest sub-branch.",
     "address": "Address",
     "phone": "Phone",
-    "fax": "Fax",
     "email": "Email",
     "viewMap": "View on Google Maps",
     "hotlines": "Complaint Hotlines",
