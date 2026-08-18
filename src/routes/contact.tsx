@@ -9,6 +9,7 @@ import {
   SUB_BRANCHES_KEGALLE,
   COMPLAINTS,
 } from "@/lib/site-data";
+import { ContactLink } from "@/components/ContactLink";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -69,15 +70,14 @@ function Contact() {
                   ))}
                 </address>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-primary">{t("contact.phone")}</p>
                   <div className="mt-1 space-y-0.5">
                     {o.phones.map((p) => (
-                      <a key={p} href={`tel:${p.replace(/\s/g, "")}`} className="block hover:text-primary">
-                        {p}
-                      </a>
+                      <ContactLink key={p} number={p} className="hover:text-primary" iconClassName="h-3.5 w-3.5" />
                     ))}
+                    
                   </div>
                 </div>
                
@@ -117,9 +117,12 @@ function Contact() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">{district}</p>
                 <div className="mt-2 flex flex-wrap gap-4">
                   {nums.map((n) => (
-                    <a key={n} href={`tel:${n.replace(/\s/g, "")}`} className="font-display text-xl font-semibold hover:text-gold">
-                      {n}
-                    </a>
+                   <ContactLink
+                      key={n}
+                      number={n}
+                      iconClassName="h-5 w-5"
+                      className="font-display text-xl font-semibold hover:text-gold"
+                    />
                   ))}
                 </div>
               </div>

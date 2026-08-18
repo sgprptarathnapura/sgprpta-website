@@ -66,30 +66,41 @@
     }
   ],
   "servicesList": [
-   {
-      "title": "Our Services",
+    {
+      "title": "Route & Permit Services",
       "items": [
         "Issuing new route permits through the tender process",
         "Renewal and updating of route permits",
-        "“Gemi Sariya” rural transport service",
-        "“Sisu Sariya” school transport service",
-        "Issuing driver and conductor permits",
-        "Issuing the relevant timetables for buses",
-        "Preparing and revising bus fares",
         "Issuing temporary route permits",
         "Issuing special tour (excursion) permits",
-        "Issuing ticket books",
-        "Issuing stickers required to be displayed in buses (clergy, expectant mothers, disabled passengers, provincial)",
         "Issuing entry permits",
+        "Issuing omnibus bus letters"
+      ]
+    },
+    {
+      "title": "Passenger Transport Programs & Infrastructure",
+      "items": [
+        "“Gemi Sariya” rural transport service",
+        "“Sisu Sariya” school transport service",
+        "Issuing the relevant timetables for buses",
+        "Preparing and revising bus fares",
+        "Issuing stickers required to be displayed in buses (clergy, expectant mothers, disabled passengers, provincial)",
+        "Construction and maintenance of passenger shelters"
+      ]
+    },
+    {
+      "title": "Licensing, Administration & Public Service",
+      "items": [
+        "Issuing driver and conductor license",
+        "Issuing ticket books",
         "Issuing log sheets",
-        "Issuing letters required to obtain financial facilities",
-        "Issuing omnibus letters",
-        "Issuing letters certifying route distances",
         "Releasing bus terminal premises for promotional activities",
-        "Providing information related to the Authority under the Right to Information Act",
-        "Construction and maintenance of passenger shelters",
+        "Leasing shop rooms owned by the Authority through the tender process",
         "Resolving public complaints",
-        "Leasing shop rooms owned by the Authority through the tender process"
+        "Providing information related to the Authority under the Right to Information Act",
+        "Conducting training programs for drivers and conductors",
+        "Organizing health camps for drivers and conductors",
+        "Operating dedicated WhatsApp hotlines for Ratnapura and Kegalle districts to receive public complaints"
       ]
     },
     {
@@ -192,10 +203,10 @@
     "viewMap": "View on Google Maps",
     "hotlines": "Complaint Hotlines",
     "hotlinesNote": "Report bus service issues directly to the district you are travelling in.",
-    "subBranches": "Sub-Branches Across the Province",
-    "subBranchesNote": "Transport Authority sub-branches at central bus stands. ({{count}} locations)",
-    "subBranchesRatnapura": "Ratnapura District Branches",
-    "subBranchesKegalle": "Kegalle District Branches",
+    "subBranches": "Service Offices Across the Province",
+    "subBranchesNote": "Transport Authority Service Offices at central bus stands. ({{count}} locations)",
+    "subBranchesRatnapura": "Ratnapura District Service Offices",
+    "subBranchesKegalle": "Kegalle District Service Offices",
     "sendMessage": "Send us a Message",
     "sendMessageNote": "Fill in the form and our team will respond to your query.",
     "form": {

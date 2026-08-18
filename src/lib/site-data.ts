@@ -146,6 +146,7 @@ const avatar = (name: string) =>
 export const STAFF = [
   { name: "H. N. T. K. Jayasena", positionKey: "gm_acting", photo: avatar("H N T K Jayasena") },
   { name: "D. L. T. M. Disanayaka", positionKey: "operational_manager", photo: avatar("D L T M Disanayaka") },
+  { name: "M. L. Thamali Dhanushika", positionKey: "mso", photo: avatar("T L Dhanushika") },
   { name: "K. M. Udeshika Madubhashini", positionKey: "chief_mso", photo: avatar("Udeshika Madubhashini") },
   { name: "S. A. Swarnalatha", positionKey: "mso", photo: avatar("S A Swarnalatha") },
   { name: "J. M. Pramila Niroshani Jayasekara", positionKey: "mso", photo: avatar("P N Jayasekara") },
@@ -167,7 +168,6 @@ export const STAFF = [
 
 // Kegalle District Office staff — official name list.
 export const STAFF_KEGALLE = [
-  { name: "N.D.R.P. Jayarathna", positionKey: "district_manager", photo: avatar("N D R P Jayarathna") },
   { name: "W.D.J. Sanjeewa", positionKey: "operational_manager", photo: avatar("W D J Sanjeewa") },
   { name: "J.D. Nimal Jayawardhana", positionKey: "transport_manager", photo: avatar("J D Nimal Jayawardhana") },
   { name: "G.D.M. Weerasinghe", positionKey: "chief_mso", photo: avatar("G D M Weerasinghe") },

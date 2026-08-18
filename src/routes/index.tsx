@@ -4,6 +4,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import logo from "@/assets/logo.png";
 import heroBuses from "@/assets/bus.png";
 import { LEADERSHIP, COMPLAINTS, STATS_BY_DISTRICT } from "@/lib/site-data";
+import { ContactLink } from "@/components/ContactLink";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -159,16 +160,15 @@ function Home() {
                 key={district}
                 className="rounded-xl border border-white/15 bg-white/5 p-6 text-center backdrop-blur sm:text-left"
               >
-                <p className="text-xs font-semibold uppercase tracking-wider text-gold">{district}</p>
-                <div className="mt-3 space-y-1.5">
+               <p className="text-xs font-semibold uppercase tracking-wider text-gold">{district}</p>
+                <div className="mt-3 flex flex-col items-center gap-1.5 sm:items-start">
                   {nums.map((n) => (
-                    <a
+                    <ContactLink
                       key={n}
-                      href={`tel:${n.replace(/\s/g, "")}`}
-                      className="block font-display text-2xl font-semibold hover:text-gold"
-                    >
-                      {n}
-                    </a>
+                      number={n}
+                      iconClassName="h-5 w-5"
+                      className="font-display text-2xl font-semibold hover:text-gold"
+                    />
                   ))}
                 </div>
               </div>
