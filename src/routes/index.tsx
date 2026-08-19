@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/SiteLayout";
 import logo from "@/assets/logo.png";
 import heroBuses from "@/assets/bus.png";
-import { LEADERSHIP, COMPLAINTS, STATS_BY_DISTRICT } from "@/lib/site-data";
+import { LEADERSHIP, COMPLAINTS, STATS_BY_DISTRICT, BUS_ROUTES } from "@/lib/site-data";
 import { ContactLink } from "@/components/ContactLink";
 
 export const Route = createFileRoute("/")({
@@ -138,6 +138,29 @@ function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+       {/* Bus routes per district */}
+      <section className="bg-secondary/50 py-16">
+        <div className="container-narrow">
+          <SectionHeading eyebrow={t("home.routes.eyebrow")} title={t("home.routes.title")} />
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {(["ratnapura", "kegalle"] as const).map((district) => (
+              <div
+                key={district}
+                className="rounded-xl border border-border bg-card p-8 text-center shadow-sm"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+                  {t(`home.district.${district}`)}
+                </p>
+                <p className="mt-3 font-display text-5xl font-bold text-primary">
+                  {BUS_ROUTES[district]}
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">{t("home.routes.label")}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

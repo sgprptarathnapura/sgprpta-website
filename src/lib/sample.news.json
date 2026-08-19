@@ -1,0 +1,13 @@
+[
+  {
+    "id": "2026-08-fare-revision",
+    "date": "2026-08-18",
+    "heading": "Bus Fare Revision Notice",
+    "description": "New bus fares effective from September 1, 2026 have been approved for all routes under SGPRPTA. See the attached notice for full details.",
+    "images": ["/news/fare-revision-notice.jpg"],
+    "link": {
+      "url": "/documents/fare-revision-2026.pdf",
+      "label": "Download full notice (PDF)"
+    }
+  }
+]

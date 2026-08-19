@@ -135,6 +135,7 @@ export const NAV = [
   { to: "/about", key: "about", label: "About" },
   { to: "/services", key: "services", label: "Services" },
   { to: "/information-act", key: "information-act", label: "Information Act" },
+  { to: "/news", key: "news", label: "News" },
   { to: "/staff", key: "staff", label: "Staff" },
   { to: "/contact", key: "contact", label: "Contact" },
 ] as const;
@@ -146,7 +147,7 @@ const avatar = (name: string) =>
 export const STAFF = [
   { name: "H. N. T. K. Jayasena", positionKey: "gm_acting", photo: avatar("H N T K Jayasena") },
   { name: "D. L. T. M. Disanayaka", positionKey: "operational_manager", photo: avatar("D L T M Disanayaka") },
-  { name: "M. L. Thamali Dhanushika", positionKey: "mso", photo: avatar("T L Dhanushika") },
+  { name: "M. L. Thamali Dhanushika", positionKey: "assistant_manager", photo: avatar("T L Dhanushika") },
   { name: "K. M. Udeshika Madubhashini", positionKey: "chief_mso", photo: avatar("Udeshika Madubhashini") },
   { name: "S. A. Swarnalatha", positionKey: "mso", photo: avatar("S A Swarnalatha") },
   { name: "J. M. Pramila Niroshani Jayasekara", positionKey: "mso", photo: avatar("P N Jayasekara") },
@@ -185,4 +186,10 @@ export const STAFF_KEGALLE = [
   { name: "H.R. Sadi Banda", positionKey: "office_assistant", photo: avatar("H R Sadi Banda") },
   { name: "K.A. Saman Chandana", positionKey: "driver", photo: avatar("K A Saman Chandana") },
 ];
+
+// Number of registered bus routes per district.
+export const BUS_ROUTES = {
+  ratnapura: 627,
+  kegalle: 540,
+} as const;
 

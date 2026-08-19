@@ -4,6 +4,7 @@
     "about": "About",
     "services": "Services",
     "information-act": "Information",
+    "news": "News",
     "staff": "Staff",
     "contact": "Contact"
   },
@@ -40,7 +41,13 @@
       "kegalle": "Kegalle District"
     },
     "complaints": { "eyebrow": "Report an Issue", "title": "Complaint Hotlines" },
-    "district": { "ratnapura": "Ratnapura District", "kegalle": "Kegalle District" }
+    "district": { "ratnapura": "Ratnapura District", "kegalle": "Kegalle District" },
+
+    "routes": {
+      "eyebrow": "Route Network",
+      "title": "Registered Bus Routes",
+      "label": "Bus Routes"
+    }
   },
   "leadership": {
     "governor": "The Governor",
@@ -118,6 +125,7 @@
   ],
   "positions": {
     "district_manager": "District Manager",
+    "assistant_manager": "Assistant Manager(Acting)",
     "transport_manager": "Transport Manager",
     "gm_acting": "General Manager (Acting)",
     "operational_manager": "Operational Manager",
@@ -223,5 +231,11 @@
     "title": "Page not found",
     "body": "This page doesn't exist or has been moved.",
     "return": "Return home"
+  },
+  "news": {
+    "title": "News & Updates",
+    "subtitle": "Notices, announcements and updates from the Authority.",
+    "emptyTitle": "No news updates available now.",
+    "emptyBody": "Please check back later — new notices and announcements will appear here."
   }
 }
