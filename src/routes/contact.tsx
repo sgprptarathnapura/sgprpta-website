@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+
 import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "./about";
@@ -152,94 +152,9 @@ function Contact() {
         </div>
       </section>
 
-      {/* Contact form */}
-      <section className="bg-secondary/50 py-16">
-        <div className="container-narrow max-w-2xl">
-          <h2 className="font-display text-2xl font-bold text-primary">{t("contact.sendMessage")}</h2>
-          <p className="mt-1 text-sm text-muted-foreground">{t("contact.sendMessageNote")}</p>
-          <ContactForm />
-        </div>
-      </section>
+      
     </SiteLayout>
   );
+
 }
 
-function ContactForm() {
-  const { t } = useTranslation();
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        const fd = new FormData(e.currentTarget);
-        if (!fd.get("name") || !fd.get("email") || !fd.get("message")) {
-          setError(t("contact.form.error"));
-          return;
-        }
-        setError(null);
-        setSent(true);
-        (e.currentTarget as HTMLFormElement).reset();
-      }}
-      className="mt-6 space-y-4 rounded-xl border border-border bg-card p-6"
-    >
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Field name="name" label={t("contact.form.name")} required />
-        <Field name="email" label={t("contact.form.email")} type="email" required />
-      </div>
-      <Field name="subject" label={t("contact.form.subject")} />
-      <div>
-        <label htmlFor="message" className="mb-1.5 block text-sm font-medium">
-          {t("contact.form.message")} <span className="text-primary">*</span>
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={5}
-          required
-          className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-        />
-      </div>
-      {error && <p className="text-sm text-destructive">{error}</p>}
-      {sent && (
-        <p className="rounded-md bg-primary-soft px-4 py-3 text-sm text-primary">
-          {t("contact.form.success")}
-        </p>
-      )}
-      <button
-        type="submit"
-        className="rounded-md bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-elegant transition hover:bg-primary-dark"
-      >
-        {t("contact.form.send")}
-      </button>
-    </form>
-  );
-}
-
-function Field({
-  name,
-  label,
-  type = "text",
-  required,
-}: {
-  name: string;
-  label: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <div>
-      <label htmlFor={name} className="mb-1.5 block text-sm font-medium">
-        {label} {required && <span className="text-primary">*</span>}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        required={required}
-        className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-      />
-    </div>
-  );
-}

@@ -16,7 +16,7 @@ export default defineConfig({
       srcDirectory: 'src' // routes live in src/routes
     }),
     nitro(),
-    // react's vite plugin must come after start's vite plugin
+    
     viteReact()
   ]
 });
