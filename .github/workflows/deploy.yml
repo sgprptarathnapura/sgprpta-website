@@ -8,7 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
+    environment: Production
+    
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -32,5 +33,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.DROPLET_IP }}
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
           TARGET: /var/www/your-gov-site/build
-          SOURCE: "dist/"
+          SOURCE: ".output/"
           ARGS: "-rlgoDzP --delete"
