@@ -8,16 +8,16 @@ import { STAFF, STAFF_KEGALLE } from "@/lib/site-data";
 export const Route = createFileRoute("/staff")({
   head: () => ({
     meta: [
-      { title: "Our Staff — SGRPTA" },
+      { title: "Our Staff — SGPRPTA" },
       {
         name: "description",
         content:
           "Meet the staff of the Sabaragamuwa Provincial Road Passenger Transport Authority — General Manager, Head Office (Ratnapura) and District Office (Kegalle).",
       },
-      { property: "og:title", content: "Our Staff — SGRPTA" },
+      { property: "og:title", content: "Our Staff — SGPRPTA" },
       {
         property: "og:description",
-        content: "General Manager, Head Office (Ratnapura) and District Office (Kegalle) teams of SGRPTA.",
+        content: "General Manager, Head Office (Ratnapura) and District Office (Kegalle) teams of SGPRPTA.",
       },
     ],
   }),

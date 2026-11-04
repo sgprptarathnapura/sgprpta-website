@@ -164,7 +164,7 @@ function Footer() {
         <div>
           <div className="flex items-center justify-center gap-3 sm:justify-start">
             <img src={logo} alt="" className="h-10 w-10 rounded-full bg-white p-1" />
-            <span className="font-display font-bold">SGRPTA</span>
+            <span className="font-display font-bold">SGPRPTA</span>
           </div>
           <p className="mt-3 text-sm opacity-80">{t("footer.tagline")}</p>
         </div>

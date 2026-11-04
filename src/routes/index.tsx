@@ -9,7 +9,7 @@ import { ContactLink } from "@/components/ContactLink";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SGRPTA — Sabaragamuwa Provincial Road Passenger Transport Authority" },
+      { title: "SGPRPTA — Sabaragamuwa Provincial Road Passenger Transport Authority" },
       {
         name: "description",
         content:

@@ -14,13 +14,13 @@ import { ContactLink } from "@/components/ContactLink";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — SGRPTA" },
+      { title: "Contact — SGPRPTA" },
       {
         name: "description",
         content:
           "Contact the Sabaragamuwa Provincial Road Passenger Transport Authority — head office (Ratnapura), district office (Kegalle), sub-branches and complaint hotlines.",
       },
-      { property: "og:title", content: "Contact — SGRPTA" },
+      { property: "og:title", content: "Contact — SGPRPTA" },
       { property: "og:description", content: "Head office, district office, sub-branches and complaint hotlines." },
     ],
   }),

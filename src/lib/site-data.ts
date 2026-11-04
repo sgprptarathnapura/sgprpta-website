@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Sabaragamuwa Road Passenger Transport Authority",
-  shortName: "SGRPTA",
+  shortName: "SGPRPTA",
   tagline: "Reliable and Quality passenger transport in Sabaragamuwa",
   facebook: "https://www.facebook.com/share/1EWsfWbS5K/",
 };

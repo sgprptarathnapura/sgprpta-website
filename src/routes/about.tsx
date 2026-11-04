@@ -7,16 +7,16 @@ import { BOARD, INFO_OFFICER, STATS_BY_DISTRICT } from "@/lib/site-data";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About the Authority — SGRPTA" },
+      { title: "About the Authority — SGPRPTA" },
       {
         name: "description",
         content:
           "Board of Directors, history, main functions and key statistics of the Sabaragamuwa Provincial Road Passenger Transport Authority.",
       },
-      { property: "og:title", content: "About the Authority — SGPPTA" },
+      { property: "og:title", content: "About the Authority — SGPRPTA" },
       {
         property: "og:description",
-        content: "Leadership, history and statistics of SGRPTA.",
+        content: "Leadership, history and statistics of SGPRPTA.",
       },
     ],
   }),
@@ -130,7 +130,7 @@ export function PageHero({ title, subtitle }: { title: string; subtitle: string 
   return (
     <section className="bg-[image:var(--gradient-hero)] py-14 text-primary-foreground">
       <div className="container-narrow">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">SGRPTA</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">SGPRPTA</p>
         <h1 className="mt-2 font-display text-4xl font-bold sm:text-5xl">{title}</h1>
         <p className="mt-3 max-w-2xl text-white/85">{subtitle}</p>
       </div>
