@@ -99,7 +99,7 @@ function Header() {
               {SITE.shortName}
             </div>
             <div className="hidden text-[11px] text-muted-foreground sm:block">
-              Sabaragamuwa Road Passenger Transport Authority
+              Sabaragamuwa Provincial Road Passenger Transport Authority
             </div>
           </div>
         </Link>

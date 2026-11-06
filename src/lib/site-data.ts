@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "Sabaragamuwa Road Passenger Transport Authority",
+  name: "Sabaragamuwa Provincial Road Passenger Transport Authority",
   shortName: "SGPRPTA",
   tagline: "Reliable and Quality passenger transport in Sabaragamuwa",
   facebook: "https://www.facebook.com/share/1EWsfWbS5K/",
@@ -81,7 +81,7 @@ export const OFFICES = [
     key: "ratnapura",
     titleKey: "offices.head",
     address: [
-      "Sabaragamuwa Road Passenger Transport Authority",
+      "Sabaragamuwa Provincial Road Passenger Transport Authority",
       "Provincial Council Complex, New Town",
       "Ratnapura",
     ],
@@ -92,10 +92,10 @@ export const OFFICES = [
   {
     key: "kegalle",
     titleKey: "offices.district",
-    address: ["Sabaragamuwa Road Passenger Transport Authority", "Rathambalawatta", "Kegalle"],
+    address: ["Sabaragamuwa Provincial Road Passenger Transport Authority", "Rathambalawatta", "Kegalle"],
     phones: ["+94 35 223 2295"],
     email: "sgprptakegalle@gmail.com",
-    mapQuery: "Sabaragamuwa Road Passenger Transport Authority Rathambalawatta Kegalle",
+    mapQuery: "Sabaragamuwa Provincial Road Passenger Transport Authority Rathambalawatta Kegalle",
   },
 ] as const;
 
