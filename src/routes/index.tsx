@@ -37,9 +37,9 @@ function Home() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/85 to-primary-dark/10"
+          className="absolute inset-0 bg-linear-to-r from-primary-dark via-primary-dark/85 to-primary-dark/10"
         />
-         <div className="container-narrow relative grid gap-10 py-16 text-center md:min-h-[520px] md:grid-cols-[1.1fr_auto] md:items-center md:py-28 md:text-left">
+         <div className="container-narrow relative grid gap-10 py-16 text-center md:min-h-130 md:grid-cols-[1.1fr_auto] md:items-center md:py-28 md:text-left">
           <div>
             <span className="inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold ring-1 ring-white/20">
               {t("home.eyebrow")}
