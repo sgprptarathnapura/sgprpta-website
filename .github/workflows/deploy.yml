@@ -35,3 +35,12 @@ jobs:
           TARGET: /var/www/your-gov-site/build
           SOURCE: ".output/"
           ARGS: "-rlgoDzP --delete"
+
+      - name: Reload application using PM2
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            pm2 reload sgprpta

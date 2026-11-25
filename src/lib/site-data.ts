@@ -185,6 +185,7 @@ export const STAFF_KEGALLE = [
   { name: "S.D. Supun Abesinghe", positionKey: "mso", photo: avatar("S D Supun Abesinghe") },
   { name: "H.R. Sadi Banda", positionKey: "office_assistant", photo: avatar("H R Sadi Banda") },
   { name: "K.A. Saman Chandana", positionKey: "driver", photo: avatar("K A Saman Chandana") },
+
 ];
 
 // Number of registered bus routes per district.
