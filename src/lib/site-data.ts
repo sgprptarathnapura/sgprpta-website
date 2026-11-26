@@ -19,8 +19,8 @@ export const LEADERSHIP = [
 ] as const;
 
 export const COMPLAINTS = {
-  ratnapura: ["070 438 6096", "045 2230557"],
-  kegalle: ["076 097 3888", "035 2222307"],
+  ratnapura: ["070 697 4697", "045 2230557"],
+  kegalle: ["070 697 5697", "035 2222307"],
 };
 
 // Per-district statistics (Kegalle figures from the District Office name list, Aug 2026).
